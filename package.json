@@ -1,0 +1,14 @@
+{
+  "name": "wedding-app",
+  "version": "1.0.0",
+  "description": "Description of your app",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
