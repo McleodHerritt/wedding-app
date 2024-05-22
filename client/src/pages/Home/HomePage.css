@@ -1,0 +1,66 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2em;
+  border-bottom: 2px solid rgb(70, 67, 67); /* Adjust the color and thickness as needed */
+  padding-bottom: 30px; /* Optional: Add some space between the text and the line */
+  width: 100%;
+  text-align: center;
+  color: rgb(14, 13, 13);
+}
+
+.main-page-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(14, 13, 13);
+  width: 90vw;
+  gap: 2rem;
+  max-width: 1200px;
+  margin-top: 20px;
+  line-height: 1.2em;
+  border-bottom: 2px solid rgb(70, 67, 67); /* Adjust the color and thickness as needed */
+  padding-bottom: 60px; /* Optional: Add some space between the text and the line */
+}
+
+.main-page-info .text-content {
+  flex: 1;
+}
+.text-content p {
+  line-height: 1.5em;
+}
+.main-page-info .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 50%;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add some styling to the image */
+}
+.main-page-info h1 {
+  font-size: 1.7em;
+  font-weight: 700;
+  font-family: "Great Vibes", cursive;
+}
+.main-page-info h2 {
+  text-decoration: underline;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}

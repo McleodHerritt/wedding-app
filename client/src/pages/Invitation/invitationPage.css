@@ -1,0 +1,105 @@
+.invitation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 500px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  margin: 10px;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/envelope.png"); /* Adjust the path as needed */
+  background-size: cover;
+  transform-origin: top;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.flap.open {
+  transform: rotateX(-180deg);
+}
+
+.text-overlay {
+  font-family: "Great Vibes", sans-serif;
+  font-size: 1.7em;
+  line-height: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  z-index: 2; /* Ensures the text is above the flap */
+}
+.text-overlay p {
+  font-family: "Great Vibes", sans-serif;
+  font-size: 1.5em;
+  color: black;
+}
+.content-behind-flap {
+  font-family: "Great Vibes", sans-serif;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/invitation.jpg"); /* Adjust the path as needed */
+  background-size: cover;
+  border: 1px solid rgb(241, 206, 206);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth transition */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 0;
+}
+.content-behind-flap h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-behind-flap p,
+.content-behind-flap h3 {
+  text-align: center;
+}
+.content-behind-flap h2,
+.content-behind-flap p,
+.content-behind-flap h3 {
+  font-family: "Great Vibes", sans-serif;
+  font-weight: 700;
+  font-size: 1.75em;
+  color: rgb(15, 13, 13);
+  line-height: 1.25em;
+}
+.content-behind-flap.open {
+  opacity: 1;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  font-family: "Great Vibes", sans-serif;
+  font-size: 0.75em;
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+}

@@ -1,0 +1,89 @@
+.rsvp-page h2 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 9rem;
+}
+
+.rsvp-form {
+  height: 500px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2rem;
+  background-image: url("../../assets/rsvpBorder.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.rsvp-form label {
+  font-size: 1.5em;
+  font-family: "Great Vibes", cursive;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  gap: 1rem;
+  margin-left: 5rem;
+}
+
+.rsvp-page input {
+  width: 50%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
+.rsvp-page input[type="number"] {
+  width: 10%;
+}
+
+.rsvp-page ::placeholder {
+  display: none;
+  font-family: poppins, sans-serif;
+  font-size: 0.75em;
+}
+
+.submit-rsvp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #4e7e62;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.submit-rsvp:hover {
+  background-color: #3e6e52;
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
+}
+
+.bottom-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attending-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.rsvp-card {
+  display: none;
+}

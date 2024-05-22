@@ -1,0 +1,24 @@
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(14, 13, 13);
+  padding-top: 5rem;
+  gap: 2rem;
+  width: 100%;
+}
+
+.para-1 {
+  font-size: smaller;
+  margin-bottom: 10px;
+  flex: 1;
+  text-align: left;
+}
+
+.para-2 {
+  font-size: smaller;
+
+  margin-bottom: 10px;
+  text-align: right;
+}
