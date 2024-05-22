@@ -13,7 +13,8 @@
     "@babel/plugin-proposal-decorators": "^7.24.1",
     "dotenv": "^16.4.5",
     "framer-motion": "^11.1.9",
-    "react-modal": "^3.16.1"
+    "react-modal": "^3.16.1",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
