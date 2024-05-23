@@ -6,11 +6,6 @@ const correctUsername = process.env.REACT_APP_USERNAME;
 const correctPassword = process.env.REACT_APP_PASSWORD;
 
 function CouplesInfo() {
-  const [guestName, setGuestName] = useState("");
-  const [attending, setAttending] = useState(true);
-  const [guestCount, setGuestCount] = useState(1);
-  const [mealChoice, setMealChoice] = useState("");
-  const [allergies, setAllergies] = useState("");
   const [updateTrigger, setUpdateTrigger] = useState(0); // This state will trigger updates in RSVPStats
   const [stats, setStats] = useState({
     name: [],
@@ -55,23 +50,6 @@ function CouplesInfo() {
     }
   }, [isAuthenticated, updateTrigger]);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const rsvp = { guestName, attending, guestCount, mealChoice, allergies };
-    try {
-      await axios.post("/api/rsvps/add", rsvp);
-      alert("RSVP submitted successfully!");
-      setUpdateTrigger((prev) => prev + 1); // Increment to trigger stats update
-      setGuestName("");
-      setAttending(true);
-      setGuestCount(1);
-      setMealChoice("");
-      setAllergies("");
-    } catch (error) {
-      alert("Failed to submit RSVP:", error.message);
-    }
-  };
-
   const deleteRSVP = async (id) => {
     try {
       await axios.delete(`/api/rsvps/delete/${id}`);
@@ -83,11 +61,6 @@ function CouplesInfo() {
   };
 
   const handleLogin = (e) => {
-    console.log("username: ", username);
-    console.log("password: ", password);
-    console.log("correctUsername: ", correctUsername);
-    console.log("correctPassword: ", correctPassword);
-
     e.preventDefault();
     if (username === correctUsername && password === correctPassword) {
       setIsAuthenticated(true);

@@ -91,19 +91,6 @@
   line-height: 1.25em;
 }
 
-.content-behind-flap.open::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit; /* Use the same background image */
-  background-size: inherit; /* Use the same background size */
-  background-repeat: no-repeat; /* Ensure no repeat */
-  opacity: 9; /* Adjust this value for the desired fade effect */
-  z-index: -1; /* Place the overlay behind the content */
-}
 .content-behind-flap.open {
   opacity: 1;
 }
