@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import RSVP from "../../components/RSVP/RSVPs";
-import RSVPStats from "../../components/RSVPstats";
 import "./RSVPPage.css";
 import backgroundImage from "../../assets/rsvpBorder.jpg";
 
