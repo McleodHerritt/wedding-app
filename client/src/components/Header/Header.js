@@ -19,32 +19,34 @@ const Header = () => {
   };
 
   return (
-    <header style={headerStyle}>
-      <div>
+    <header className="header" style={headerStyle}>
+      <div className="header__left">
         <h1 className="title">Randy & Nicole's Wedding</h1>
         <button className="RSVP" onClick={handleRsvpClick}>
           RSVP
         </button>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/rsvp">RSVP</Link>
-          </li>
-          <li>
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li>
-            <Link to="/invitation">Invitation</Link>
-          </li>
-          <li>
-            <Link to="/couples-info">CouplesInfo</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="header__right">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/rsvp">RSVP</Link>
+            </li>
+            <li>
+              <Link to="/gallery">Gallery</Link>
+            </li>
+            <li>
+              <Link to="/invitation">Invitation</Link>
+            </li>
+            <li>
+              <Link to="/couples-info">Couples Info</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

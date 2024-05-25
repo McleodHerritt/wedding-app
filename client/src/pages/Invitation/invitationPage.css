@@ -26,6 +26,7 @@
   transform-origin: top;
   transition: transform 0.5s ease;
   z-index: 1;
+  margin-top: 3rem;
 }
 
 .flap.open {
@@ -103,4 +104,118 @@
   color: white;
   text-align: center;
   margin-top: 1em;
+}
+@media (max-width: 1024px) {
+  .invitation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    margin: 10px;
+  }
+
+  .text-overlay {
+    font-size: 1.7em;
+    line-height: 2em;
+  }
+
+  .text-overlay p {
+    font-size: 1.5em;
+  }
+
+  .content-behind-flap {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .content-behind-flap h2,
+  .content-behind-flap p,
+  .content-behind-flap h3 {
+    font-size: 1.5em;
+  }
+
+  .details {
+    flex-direction: row;
+    font-size: 0.75em;
+    margin-top: 0.5em;
+  }
+}
+@media (max-width: 768px) {
+  .invitation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    margin: 10px;
+  }
+
+  .text-overlay {
+    font-size: 1.5em;
+    line-height: 1.8em;
+  }
+
+  .text-overlay p {
+    font-size: 1.3em;
+  }
+
+  .content-behind-flap {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .content-behind-flap h2,
+  .content-behind-flap p,
+  .content-behind-flap h3 {
+    font-size: 1.2em;
+  }
+
+  .details {
+    flex-direction: row;
+    font-size: 0.65em;
+    margin-top: 0.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .invitation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    margin: 10px;
+  }
+
+  .text-overlay {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+  .text-overlay p {
+    font-size: 1em;
+  }
+
+  .content-behind-flap {
+    padding: 5px; /* Further reduce padding for very small screens */
+  }
+
+  .content-behind-flap h2,
+  .content-behind-flap p,
+  .content-behind-flap h3 {
+    font-size: 1em;
+    margin-top: 2em;
+  }
+
+  .details {
+    flex-direction: row;
+    font-size: 0.8em;
+    padding: 0em;
+    margin: 0em;
+  }
 }

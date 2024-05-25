@@ -64,3 +64,85 @@
   margin-bottom: 10px;
   color: black;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .main-page-title {
+    font-size: 2.5em;
+  }
+
+  .main-page-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-page-info .image-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-page-title {
+    font-size: 2.2em;
+  }
+
+  .main-page-info h1 {
+    font-size: 1.5em;
+  }
+
+  .main-page-info h2 {
+    font-size: 1.2em;
+  }
+
+  .main-page-info .text-content p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-page-title {
+    font-size: 2em;
+  }
+
+  .main-page-info {
+    gap: 1rem;
+    padding-bottom: 40px;
+  }
+
+  .main-page-info h1 {
+    font-size: 1.3em;
+  }
+
+  .main-page-info h2 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-page {
+    padding: 10px;
+  }
+
+  .main-page-title {
+    font-size: 1.8em;
+    padding-bottom: 20px;
+  }
+
+  .main-page-info {
+    gap: 0.5rem;
+    padding-bottom: 20px;
+  }
+
+  .main-page-info h1 {
+    font-size: 1.2em;
+  }
+
+  .main-page-info h2 {
+    font-size: 1em;
+  }
+
+  .main-page-info .text-content p {
+    font-size: 0.9em;
+  }
+}

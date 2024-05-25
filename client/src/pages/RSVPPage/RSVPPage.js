@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import RSVP from "../../components/RSVP/RSVPs";
 import "./RSVPPage.css";
 import backgroundImage from "../../assets/rsvpBorder.jpg";
 
@@ -38,6 +37,7 @@ function RSVPPage() {
       alert("Failed to submit RSVP:", error.message);
     }
   };
+
   const deleteRSVP = async (id) => {
     try {
       await axios.delete(`/api/rsvps/delete/${id}`);
@@ -51,47 +51,50 @@ function RSVPPage() {
   return (
     <div className="rsvp-page">
       <h2>RSVP for the Wedding</h2>
-      <form className="rsvp-form" onSubmit={handleSubmit} backgroundImage={backgroundImage}>
-        <label>
-          Name:
-          <input type="text" value={guestName} onChange={(e) => setGuestName(e.target.value)} required placeholder="Your Name" />
-        </label>
-        <label>
-          Attending:
-          <select value={attending} onChange={(e) => setAttending(e.target.value === "true")}>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-          </select>
-        </label>
-        <label>
-          Number of Guests:
-          <input type="number" value={guestCount} min="0" onChange={(e) => setGuestCount(e.target.value)} required placeholder="Number attending" />
-        </label>
-        <label>
-          Meal Choice:
-          <select value={mealChoice} onChange={(e) => setMealChoice(e.target.value)}>
-            <option value="">Choose one</option>
-            <option value="beef">Beef</option>
-            <option value="chicken">Chicken</option>
-            <option value="fish">Fish</option>
-            <option value="vegetarian">Vegetarian</option>
-          </select>
-        </label>
-        <label>
-          Allergies:
-          <input type="text" value={allergies} onChange={(e) => setAllergies(e.target.value)} placeholder="Only if you have allergies" />
-        </label>
-        <div>
-          <button className="submit-rsvp" type="submit">
-            Submit RSVP
-          </button>
-        </div>
-      </form>
-      {rsvps.map((rsvp) => (
-        <>
-          <RSVP rsvp={rsvp} deleteRSVP={deleteRSVP} displayInfo={false} />
-        </>
-      ))}
+      <div className="rsvp-form-container">
+        <form className="rsvp-form" onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input type="text" value={guestName} onChange={(e) => setGuestName(e.target.value)} required placeholder="Your Name" />
+          </label>
+          <label>
+            Attending:
+            <select value={attending} onChange={(e) => setAttending(e.target.value === "true")}>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </label>
+          <label>
+            Number of Guests:
+            <input type="number" value={guestCount} min="0" onChange={(e) => setGuestCount(e.target.value)} required placeholder="Number attending" />
+          </label>
+          <label>
+            Meal Choice:
+            <select value={mealChoice} onChange={(e) => setMealChoice(e.target.value)}>
+              <option value="">Choose one</option>
+              <option value="beef">Beef</option>
+              <option value="chicken">Chicken</option>
+              <option value="fish">Fish</option>
+              <option value="vegetarian">Vegetarian</option>
+            </select>
+          </label>
+          <label>
+            Allergies:
+            <input
+              className="allergies-input"
+              type="text"
+              value={allergies}
+              onChange={(e) => setAllergies(e.target.value)}
+              placeholder="Only if you have allergies"
+            />
+          </label>
+          <div className="rsvp-button-container">
+            <button className="submit-rsvp" type="submit">
+              Submit RSVP
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
