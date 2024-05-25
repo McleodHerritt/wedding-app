@@ -18,7 +18,7 @@ function RSVPPage() {
         setRsvps(res.data); // Assuming the response data is the array of RSVPs
       })
       .catch((error) => console.error("Error fetching RSVPs:", error));
-  }, [updateTrigger]);
+  }, [setRsvps, updateTrigger]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
