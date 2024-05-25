@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./RSVPPage.css";
-import backgroundImage from "../../assets/rsvpBorder.jpg";
 
 function RSVPPage() {
   const [guestName, setGuestName] = useState("");
@@ -10,7 +9,7 @@ function RSVPPage() {
   const [mealChoice, setMealChoice] = useState("");
   const [allergies, setAllergies] = useState("");
   const [updateTrigger, setUpdateTrigger] = useState(0); // This state will trigger updates in RSVPStats
-  const [rsvps, setRsvps] = useState([]);
+  const [setRsvps] = useState([]);
 
   useEffect(() => {
     axios
@@ -38,15 +37,15 @@ function RSVPPage() {
     }
   };
 
-  const deleteRSVP = async (id) => {
-    try {
-      await axios.delete(`/api/rsvps/delete/${id}`);
-      alert("RSVP deleted successfully!");
-      setUpdateTrigger((prev) => prev + 1); // Increment to trigger stats update
-    } catch (error) {
-      alert("Failed to delete RSVP:", error.message);
-    }
-  };
+  // const deleteRSVP = async (id) => {
+  //   try {
+  //     await axios.delete(`/api/rsvps/delete/${id}`);
+  //     alert("RSVP deleted successfully!");
+  //     setUpdateTrigger((prev) => prev + 1); // Increment to trigger stats update
+  //   } catch (error) {
+  //     alert("Failed to delete RSVP:", error.message);
+  //   }
+  // };
 
   return (
     <div className="rsvp-page">
