@@ -6,8 +6,16 @@ body {
 }
 .login-container h2 {
   text-align: center;
+  margin-top: 5rem;
   margin-bottom: 1rem;
   font-size: 3rem;
+}
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 .couples-info {
   display: flex;

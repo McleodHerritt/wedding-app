@@ -47,6 +47,7 @@
   padding: 10px;
   margin-top: 5px;
   box-sizing: border-box;
+  border: 1px solid #ccc;
 }
 
 .rsvp-form button {
@@ -77,12 +78,37 @@
   .rsvp-page h2 {
     font-size: 1.75rem;
     margin-bottom: 5rem;
+    flex: 1;
   }
-
   .rsvp-form-container {
-    background-image: none;
+    background-image: url("../../assets/rsvp-small-border.jpg");
+    box-shadow: none;
+    position: relative;
+    background-size: cover;
+  }
+  .top-rsvp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .top-rsvp h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .top-rsvp p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
+  .small-image {
+    width: 100%;
+    max-height: 200px;
+    margin: 0 auto 2rem auto; /* Center the image and add space below it */
+
+    flex: 1;
+  }
   .rsvp-form {
     display: flex;
     flex-direction: column;

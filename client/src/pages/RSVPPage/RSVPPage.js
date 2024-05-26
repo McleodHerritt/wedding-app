@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./RSVPPage.css";
+import RSVPsmallImg from "../../assets/rsvp-small-border.jpg";
 
 function RSVPPage() {
   const [guestName, setGuestName] = useState("");
@@ -49,7 +50,10 @@ function RSVPPage() {
 
   return (
     <div className="rsvp-page">
-      <h2>RSVP for the Wedding</h2>
+      <div className="top-rsvp">
+        <h2>RSVP for the Wedding</h2>
+        <image className="small-image" src={RSVPsmallImg} alt="RSVP" />
+      </div>
       <div className="rsvp-form-container">
         <form className="rsvp-form" onSubmit={handleSubmit}>
           <label>
